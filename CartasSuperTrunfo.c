@@ -5,7 +5,7 @@ int main(){
 //variáveis para cadastro das cartas_1
 
     char estado1;
-    char codigo_carta1[4];
+    char codigo_carta1[10];
     char nome_cidade1[20];
     int populacao1;
     float area1; 
@@ -15,7 +15,7 @@ int main(){
 //variáveis para cadastro das cartas_2
 
     char estado2;
-    char codigo_carta2[4];
+    char codigo_carta2[10];
     char nome_cidade2[20];
     int populacao2;
     float area2; 
@@ -29,7 +29,7 @@ int main(){
     printf("Digite os dados da carta - 1 \n");
 
     printf("Estado (letra de A a H): \n");
-    scanf("%s", &estado1);
+    scanf("%c", &estado1);
 
     printf("Código da carta (ex: A01 ou B02): \n");
     scanf("%s", &codigo_carta1);
@@ -68,7 +68,7 @@ int main(){
     printf("Digite os dados da carta - 2 \n");
 
     printf("Estado (letra de A a H): \n");
-    scanf("%s", &estado2);
+    scanf("%c", &estado2);
 
     printf("Código da carta (ex: A01 ou B02): \n");
     scanf("%s", &codigo_carta2);
