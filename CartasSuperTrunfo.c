@@ -5,22 +5,26 @@ int main(){
 //variáveis para cadastro das cartas_1
 
     char estado1;
-    char codigo_carta1[10];
+    char codigo_carta1[4];
     char nome_cidade1[20];
     int populacao1;
     float area1; 
     float pib1;
     int pontos_turisticos1;
+    float densidade_pop1;
+    float pib_percapita1;
 
 //variáveis para cadastro das cartas_2
 
     char estado2;
-    char codigo_carta2[10];
+    char codigo_carta2[4];
     char nome_cidade2[20];
     int populacao2;
     float area2; 
     float pib2;
     int pontos_turisticos2;
+    float densidade_pop2;
+    float pib_percapita2;
 
 
 //Cadastro da carta_1
@@ -29,7 +33,7 @@ int main(){
     printf("Digite os dados da carta - 1 \n");
 
     printf("Estado (letra de A a H): \n");
-    scanf("%c", &estado1);
+    scanf("%s", &estado1);
 
     printf("Código da carta (ex: A01 ou B02): \n");
     scanf("%s", &codigo_carta1);
@@ -49,6 +53,9 @@ int main(){
     printf("PIB (em bilhões de Reais): \n");
     scanf("%f", &pib1);
 
+    densidade_pop1 = populacao1 / area1;
+    pib_percapita1 = pib1 / populacao1;
+
 //Retornar ao usuário o cadastro que ele fez da carta_1
 
     printf("Dados da Carta 1 \n");
@@ -58,8 +65,10 @@ int main(){
     printf("Cidade: %s \n", nome_cidade1);
     printf("População: %d \n", populacao1);
     printf("Pontos turísticos: %d \n", pontos_turisticos1);
-    printf("Área em km²: %f \n", area1);
-    printf("PIB: %f \n", pib1);
+    printf("Área em km²: %.2f \n", area1);
+    printf("PIB: %.2f \n", pib1);
+    printf("Densidade Populacional: %.2f \n", densidade_pop1);
+    printf("PIB per Capita: %.2f \n", pib_percapita1);
 
 
 //Cadastro da carta_2
@@ -68,7 +77,7 @@ int main(){
     printf("Digite os dados da carta - 2 \n");
 
     printf("Estado (letra de A a H): \n");
-    scanf("%c", &estado2);
+    scanf("%s", &estado2);
 
     printf("Código da carta (ex: A01 ou B02): \n");
     scanf("%s", &codigo_carta2);
@@ -88,6 +97,9 @@ int main(){
     printf("PIB (em bilhões de Reais): \n");
     scanf("%f", &pib2);
 
+    densidade_pop2 = populacao2 / area2;
+    pib_percapita2 = pib2 / populacao2;
+
 //Retornar ao usuário o cadastro que ele fez da carta_2
 
     printf("Dados da Carta 2 \n");
@@ -97,8 +109,10 @@ int main(){
     printf("Cidade: %s \n", nome_cidade2);
     printf("População: %d \n", populacao2);
     printf("Pontos turísticos: %d \n", pontos_turisticos2);
-    printf("Área em km²: %f \n", area2);
-    printf("PIB: %f \n", pib2);
+    printf("Área em km²: %.2f \n", area2);
+    printf("PIB: %.2f \n", pib2);
+    printf("Densidade Populacional: %.2f \n", densidade_pop2);
+    printf("PIB per Capita: %.2f \n", pib_percapita2);
 
 
 }
