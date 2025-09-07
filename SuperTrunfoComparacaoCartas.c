@@ -52,17 +52,9 @@ int main() {
     scanf("%f", &pib1);
 
     // Calculo para carta 1
-    if (area1 != 0) {
-        densidade_pop1 = (float)populacao1 / area1;
-    } else {
-        densidade_pop1 = 0;
-    }
-
-    if (populacao1 != 0) {
-        pib_percapita1 = pib1 / (float)populacao1;
-    } else {
-        pib_percapita1 = 0;
-    }
+    
+    densidade_pop1 = (float)populacao1 / area1;
+    pib_percapita1 = pib1 / (float)populacao1;
 
     // Cadastro da carta_2
     printf("Digite os dados da carta - 2 \n");
@@ -89,28 +81,14 @@ int main() {
     scanf("%f", &pib2);
 
     // Calculo para carta 2
-    if (area2 != 0) {
-        densidade_pop2 = (float)populacao2 / area2;
-    } else {
-        densidade_pop2 = 0;
-    }
+    
+    densidade_pop2 = (float)populacao2 / area2;
+    pib_percapita2 = pib2 / (float)populacao2;
 
-    if (populacao2 != 0) {
-        pib_percapita2 = pib2 / (float)populacao2;
-    } else {
-        pib_percapita2 = 0;
-    }
-
-    // Calculo do Super poder (soma dos valores numéricos)
-    superpw1 = (float)populacao1 + area1 + pib1 + (float)pontos_turisticos1 + pib_percapita1;
-    if (densidade_pop1 != 0) {
-        superpw1 += (1.0f / densidade_pop1);
-    }
-
-    superpw2 = (float)populacao2 + area2 + pib2 + (float)pontos_turisticos2 + pib_percapita2;
-    if (densidade_pop2 != 0) {
-        superpw2 += (1.0f / densidade_pop2);
-    }
+//Calculo do Super poder (soma dos valores numericos)
+    
+    superpw1 = (float)populacao1 + area1 + pib1 + (float)pontos_turisticos1 + pib_percapita1 + (1.0f / densidade_pop1);
+    superpw2 = (float)populacao2 + area2 + pib2 + (float)pontos_turisticos2 + pib_percapita2 + (1.0f / densidade_pop2);
 
     // Retornar ao usuário o cadastro que ele fez da carta_1
     printf("\n--- Dados da Carta 1 ---\n");
